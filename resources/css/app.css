@@ -22,7 +22,9 @@
     direction: ltr;
     text-align: left;
 }
-
+.box2d{
+    transition: all 0s;
+}
 body {
     /*background: url(/img/bg.jpg);*/
     background-color: #cccccc;

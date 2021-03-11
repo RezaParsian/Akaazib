@@ -1861,10 +1861,41 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  mounted: function mounted() {
-    console.log('Component mounted.');
-  }
+  data: function data() {
+    return {
+      page: 0,
+      SE: ["تو هیچ نخواهی خواند. هیچ. مطمئنی که این‌ها نوشته شده‌اند. اما مجال آن‌قدر تنگ است و پایان چنان نامنتظر که نمی‌توانی مطمئن باشی. هیچِ هیچ؟ اما من همه را نوشته‌ام و تو خوانده‌ای. مطمئنی. نیستی. برمی‌گردی. نمی‌خوانی. جلو می‌زنی. عقب می‌افتی. از چه؟ از که؟ از کلمه؟ از خودت. این داستانِ چیست؟ این داستانِ کیست؟ نه، اشتباه است. باید پرسید این چیِ داستان است؟ کیِ داستان است؟ این منِ داستان است. تو. که فرومی‌ریزی. که نخواهی خواند. می‌نویسم «هیچ». نمی‌خوانم هیچ. بین ما هیچ نیست. بین ما هیچ هست. بس کن این بازی مسخره را.", "آنچه خواهد ریخت خون است. خونِ خدا. چرا که در آغاز کلمه بود. و کلمه نزد خدا بود. و کلمه خدا بود. و خدا خواهد مرد. چرا که آغاز همان پایان است. چرا که خدا همان مرگ است. و مرگ همان کلمه است. نیست خواهم شد پس هستم.", "جمع کن این لفاظی‌ها را آقا. مگر چقدر می‌توان بازی کرد، با این کلیشه‌های همیشگی و... تو مطمئنی؟ مطمئنی که بالاخره، یک جایی، یک رخداد، هسته‌ی اصلی داستان، رخ خواهد داد؟ برای چه باید جلو برویم؟ برای چه باید جلو بروی؟ آهای با توام، کجایی؟", "پا نداری که بنویسی. که بباری. که بمیری. ننویس. برگرد. به آغاز. مثل باران. که می‌خواند. که نخواهد خواند. این متن از پایان شروع شده و به آغاز خواهد انجامید. بنویس. بردار این‌ها را بنویس. بدون این که بخوانی بنویس. متنِ خالص. اشاره به هیچ. چقدر تکراری است! حرفِ تازه، شعرِ تازه، ننوشتن است. پس پاشو. پا که نداری. چرا توی آینه پشت سرت را می‌پایی؟ برگرد، نگاه کن، ببین آن آدم توی آینه هم برمی‌گردد. آینه رو برمی‌گرداند. ببین که روی صورتت نوشته چی؟ نوشته چی. واقعن که پرحرفی.", "پس تن را شروع کنیم. تن که تمام شد... راستی تن کجا تمام می‌شود؟ مگر معرفت همان به‌یاد‌آوردن نبود؟ پس فراموش کن. چرا تن نداری؟ تن دارم. تو. همان‌وقت که خوانده می‌شود نوشته می‌شود. حالا پیکری از کلمات بر من آوار می‌شود/ تن. حالا این زخمِ ناکجا دهان باز می‌کند. می‌گوید نخوان. از اینجا به بعد را دیگر نخوان. فرشته‌ای که رسیده می‌گوید. نمی‌گوید.", "تو هیچ نخواهی خواند. هیچ. مطمئنی که این‌ها نوشته شده‌اند. اما مجال آن‌قدر تنگ است و پایان چنان نامنتظر که نمی‌توانی مطمئن باشی. هیچِ هیچ؟ اما من همه را نوشته‌ام و تو خوانده‌ای. مطمئنی. نیستی. برمی‌گردی. نمی‌خوانی. جلو می‌زنی. عقب می‌افتی. از چه؟ از که؟ از کلمه؟ از خودت. این داستانِ چیست؟ این داستانِ کیست؟ نه، اشتباه است. باید پرسید این چیِ داستان است؟ کیِ داستان است؟ این منِ داستان است. تو. که فرومی‌ریزی. که نخواهی خواند. می‌نویسم «هیچ». نمی‌خوانم هیچ. بین ما هیچ نیست. بین ما هیچ هست. بس کن این بازی مسخره را."]
+    };
+  },
+  methods: {
+    SplitWord: function SplitWord() {
+      var _this = this;
+
+      var words = this.SE[this.page].split(" ");
+      this.SE[this.page] = "";
+      words.forEach(function (element) {
+        _this.SE[_this.page] += "<span class=\"box2d\">".concat(element, " </span>");
+      });
+    },
+    Finish: function Finish() {
+      this.SplitWord();
+      $("#reza").click();
+    },
+    Next: function Next() {
+      this.page++;
+
+      if (this.page == 5) {
+        this.Finish();
+      }
+    }
+  },
+  mounted: function mounted() {}
 });
 
 /***/ }),
@@ -37401,32 +37432,44 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "row justify-content-center" }, [
-        _c("div", { staticClass: "col-md-8" }, [
-          _c("div", { staticClass: "card" }, [
-            _c("div", { staticClass: "card-header" }, [
-              _vm._v("Example Component")
-            ]),
+  return _c("div", { staticClass: "container" }, [
+    _c("div", { attrs: { id: "rp76", onclick: "Rp()" } }),
+    _vm._v(" "),
+    _c("div", { staticClass: "row justify-content-center" }, [
+      _c("div", { staticClass: "col-md-8 mt-5" }, [
+        _c("div", { staticClass: "border rounded mt-5" }, [
+          _c("div", { staticClass: "card-body" }, [
+            _c("p", { domProps: { innerHTML: _vm._s(_vm.SE[_vm.page]) } }),
             _vm._v(" "),
-            _c("div", { staticClass: "card-body" }, [
-              _vm._v(
-                "\n                    I'm an example component.\n                "
-              )
-            ])
+            _vm.page != 5 ? _c("hr") : _vm._e(),
+            _vm._v(" "),
+            _vm.page != 5
+              ? _c(
+                  "div",
+                  { staticClass: "col-md justify-content-center d-flex" },
+                  [
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-outline-secondary",
+                        on: {
+                          click: function($event) {
+                            return _vm.Next()
+                          }
+                        }
+                      },
+                      [_vm._v("\n              ادامه\n            ")]
+                    )
+                  ]
+                )
+              : _vm._e()
           ])
         ])
       ])
     ])
-  }
-]
+  ])
+}
+var staticRenderFns = []
 render._withStripped = true
 
 

@@ -30,4 +30,10 @@ Route::group(['prefix' => 'admin', "namespace" => "Admin", "middleware" => "auth
     Route::put("viewnote","main@UpdateNote")->name("note.update");
 });
 
+Route::prefix('kezb')->group(function () {
+    Route::get('aval', function () {
+        return view("kezb.aval");
+    });
+});
+
 Auth::routes(['register' => false]);
