@@ -1,0 +1,41 @@
+@font-face {
+    font-family: lotus-bold;
+    src: url(/styles/fonts/Bahij-Lotus-Bold.ttf) format('truetype')
+}
+
+@font-face {
+    font-family: SourceSerifPro;
+    src: url(/styles/fonts/SourceSerifPro-SemiBold.ttf) format('truetype')
+}
+
+@font-face {
+    font-family: calirb;
+    font-weight: bold;
+    src: url(/styles/fonts/CALIBRIB.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: badr;
+    src: url(/styles/fonts/BAHIJBADR.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: badr_bold;
+    font-weight: bold;
+    src: url(/styles/fonts/BAHIJBADRBOLD.ttf) format("truetype");
+}
+
+body.rtl *:not(.fa):not(.fab):not(.fal):not(.far):not(.fas):not([class*=" eicon-"]):not([class^=eicon]):not(.mce-ico) {
+    font-family: "SourceSerifPro", "lotus-bold";
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "calirb" !important;
+}
+
+.badr{
+    font-family: "badr" !important;
+}
+.badr_bold{
+    font-family: "badr_bold" !important;
+}
