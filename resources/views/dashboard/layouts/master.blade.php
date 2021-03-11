@@ -6,11 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>پنل مدیریت اکاذیب</title>
 
-    <link rel="stylesheet" href="/styles/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/styles/css/fonts.css">
-    <link rel="stylesheet" href="/styles/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/styles/css/summernote-bs4.css">
-    <link rel="stylesheet" href="/styles/css/custom.css">
+    <link rel="stylesheet" href="{{ asset('css/app.css' . '?id=' . filemtime('css/app.css')) }}">
+    @yield('ex-css')
 
     <style>
         .nav-item:hover {
@@ -27,19 +24,19 @@
         }
 
         * {
-    -webkit-touch-callout: unset;
-    /* iOS Safari */
-    -webkit-user-select: unset;
-    /* Safari */
-    -khtml-user-select: unset;
-    /* Konqueror HTML */
-    -moz-user-select: unset;
-    /* Firefox */
-    -ms-user-select: unset;
-    /* Internet Explorer/Edge */
-    user-select: unset;
-    transition: all 0.5s;
-}
+            -webkit-touch-callout: unset;
+            /* iOS Safari */
+            -webkit-user-select: unset;
+            /* Safari */
+            -khtml-user-select: unset;
+            /* Konqueror HTML */
+            -moz-user-select: unset;
+            /* Firefox */
+            -ms-user-select: unset;
+            /* Internet Explorer/Edge */
+            user-select: unset;
+            transition: all 0.5s;
+        }
 
     </style>
 </head>
@@ -51,7 +48,7 @@
     @include('dashboard.layouts.modal')
 
     <section>
-        <div class="container-fluid">
+        <div class="container-fluid" id="app">
             <div class="row">
                 <div class="col-lg-10 mr-auto mt-5 rouded">
                     <div class="row p-2 justify-content-center mx-1">
@@ -66,10 +63,7 @@
             </div>
         </div>
     </section>
-
-    <script src="/styles/js/0-jquery.min.js"></script>
-    <script src="/styles/js/1-popper.min.js"></script>
-    <script src="/styles/js/2-bootstrap.min.js"></script>
+    <script src="{{ asset('js/app.js') . '?id=' . filemtime('js/app.js') }}"></script>
     @yield('ex-js')
 </body>
 
